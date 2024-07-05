@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte DAP</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">Carte DAP</h1>
+        <form action="/submit" method="post" class="space-y-4">
+            <div>
+                <label for="username" class="block text-gray-700">User Name</label>
+                <input type="text" id="username" name="username"
+                    class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            </div>
+            <div>
+                <label for="number" class="block text-gray-700">15-Digit Number</label>
+                <input type="text" id="number" name="number" class="mt-1 p-2 border border-gray-300 rounded-md w-full"
+                    pattern="\d{15}" required>
+            </div>
+            <div>
+                <label for="referent" class="block text-gray-700">Referent Name</label>
+                <input type="text" id="referent" name="referent"
+                    class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
